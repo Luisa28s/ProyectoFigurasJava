@@ -9,7 +9,7 @@ public class Rombo extends Figuras {
     public Rombo() {
     }
 
-    public Rombo(int area, int perimetro, double promedio, int diagonalMayor, int diagonalMenor, int lado) {
+    public Rombo(double area, int perimetro, double promedio, int diagonalMayor, int diagonalMenor, int lado) {
         super(area, perimetro, promedio);
         this.diagonalMayor = diagonalMayor;
         this.diagonalMenor = diagonalMenor;
@@ -40,4 +40,12 @@ public class Rombo extends Figuras {
         this.lado = lado;
     }
 
+    public double CalcularArea(int dM, int dm){
+        Area<Double> rombo = (diagonalm) -> ((double) dM * diagonalm) / 2;
+        return rombo.CalcularArea(dm);
+    }
+    public int CalcularPerimetro(int i){
+        Perimetro<Integer> rombo = (lado) -> 4 *lado;
+        return rombo.CalcularPerimetro(i);
+    }
 }

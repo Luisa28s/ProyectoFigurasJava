@@ -8,7 +8,7 @@ public class Pentagono extends Figuras {
     public Pentagono() {
     }
 
-    public Pentagono(int area, int perimetro, double promedio, int perimetroPent, int apotemaPent, int ladoPent) {
+    public Pentagono(double area, int perimetro, double promedio, int perimetroPent, int apotemaPent, int ladoPent) {
         super(area, perimetro, promedio);
         this.perimetroPent = perimetroPent;
         this.apotemaPent = apotemaPent;
@@ -39,4 +39,13 @@ public class Pentagono extends Figuras {
         this.ladoPent = ladoPent;
     }
 
+    public double CalcularArea(int l){
+        double constPenta=0.25 * Math.sqrt(5 * (5 + 2 * Math.sqrt(5)));
+        Area<Double> penta= (lado) ->  constPenta * (lado*lado);
+        return penta.CalcularArea(l);
+    }
+    public int CalcularPerimetro(int i){
+        Perimetro<Integer> penta = (lado) -> 5 *lado;
+        return penta.CalcularPerimetro(i);
+    }
 }

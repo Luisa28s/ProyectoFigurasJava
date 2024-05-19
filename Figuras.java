@@ -1,22 +1,28 @@
-public class Figuras {
-    private int area;
+public abstract class Figuras {
+    private double area;
     private int perimetro;
     private double promedio;
+
+
 
     public Figuras() {
     }
 
-    public Figuras(int area, int perimetro, double promedio) {
+
+
+    public Figuras(double area, int perimetro, double promedio) {
         this.area = area;
         this.perimetro = perimetro;
         this.promedio = promedio;
     }
 
-    public int getArea() {
+
+
+    public double getArea() {
         return area;
     }
 
-    public void setArea(int area) {
+    public void setArea(double area) {
         this.area = area;
     }
 
