@@ -7,13 +7,11 @@ public class Paralelogramo extends Figuras {
 
     }
 
-
     public Paralelogramo(double area, int perimetro, double promedio, int baseP, int alturaP) {
         super(area, perimetro, promedio);
         this.baseP = baseP;
         this.alturaP = alturaP;
     }
-
 
     public int getBaseP() {
         return baseP;
@@ -31,12 +29,14 @@ public class Paralelogramo extends Figuras {
         this.alturaP = alturaP;
     }
 
-    public int CalcularArea(int bas, int alt){
+    public int CalcularArea(int bas, int alt) {
         Area<Integer> para = (altura) -> bas * altura;
         return para.CalcularArea(alt);
     }
-    public int CalcularPerimetro(int ladoc,int ladol){
-        Perimetro<Integer> para = (lado) -> (ladoc+lado)*2;
+
+    public int CalcularPerimetro(int ladoc, int ladol) {
+        Perimetro<Integer> para = (lado) -> (ladoc + lado) * 2;
         return para.CalcularPerimetro(ladol);
     }
+
 }
